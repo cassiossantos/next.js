@@ -1,4 +1,4 @@
-import { ErrorFeedback } from './error-feedback'
+import { ErrorFeedback } from './error-feedback/error-feedback'
 
 export type ErrorOverlayFooterProps = {
   errorCode: string
