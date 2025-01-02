@@ -3,11 +3,12 @@ import { useState } from 'react'
 import { ThumbsUp } from '../../../icons/thumbs/thumbs-up'
 import { ThumbsDown } from '../../../icons/thumbs/thumbs-down'
 
-export function ErrorFeedback() {
+export function ErrorFeedback({ errorCode }: { errorCode: string }) {
   const [voted, setVoted] = useState<'good' | 'bad' | null>(null)
   const hasVoted = voted !== null
 
   const handleFeedback = (value: 'good' | 'bad') => {
+    console.log('errorCode:', errorCode)
     setVoted(value)
   }
 

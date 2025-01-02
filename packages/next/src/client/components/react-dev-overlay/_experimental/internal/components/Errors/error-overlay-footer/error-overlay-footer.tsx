@@ -1,10 +1,18 @@
 import { ErrorFeedback } from './error-feedback'
 
-export function ErrorOverlayFooter({ message }: { message: string }) {
+export type ErrorOverlayFooterProps = {
+  errorCode: string
+  message: string
+}
+
+export function ErrorOverlayFooter({
+  errorCode,
+  message,
+}: ErrorOverlayFooterProps) {
   return (
     <footer className="error-overlay-footer">
       <p>{message}</p>
-      <ErrorFeedback />
+      <ErrorFeedback errorCode={errorCode} />
     </footer>
   )
 }
