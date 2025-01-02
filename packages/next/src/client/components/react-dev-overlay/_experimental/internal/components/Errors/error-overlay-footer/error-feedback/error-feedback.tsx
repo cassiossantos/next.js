@@ -9,7 +9,6 @@ export function ErrorFeedback({ errorCode }: { errorCode: string }) {
   const hasVoted = voted !== null
 
   const handleFeedback = (value: 'good' | 'bad') => {
-    console.log('errorCode:', errorCode)
     setVoted(value)
     setIsToastVisible(true)
   }
